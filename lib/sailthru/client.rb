@@ -389,6 +389,15 @@ module Sailthru
       api_post(:purchase, data)
     end
 
+    def return(email, items)
+      data = {}
+
+      data[:email] = email
+      data[:items] = items
+
+      api_post(:return, data)
+    end
+
     # <b>DEPRECATED:</b> Please use either stats_list or stats_blast
     # params:
     #   stat, String
